@@ -23,8 +23,8 @@ def selection_sort( arr ):
 def bubble_sort( arr ):
     sorted = False
     while sorted == False:
+        sorted = True
         for i in range(0, len(arr) - 1): # loop through array
-            sorted = True
             j = i + 1 # index of next element
             temp = arr[i] # set temporary value equal to current value  
             if arr[i] > arr[j]:
