@@ -20,17 +20,14 @@ def merge( arrA, arrB ):
             b += 1
     return merged_arr
 
-
-
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     # TO-DO
-    left = merge_sort(arr[0:(len(arr)//2)])
-    right = merge_sort(arr[(len(arr)//2):len(arr)])
-    arr = merge(left, right)
+    if len(arr) > 1: 
+        left = merge_sort(arr[0:(len(arr)//2)])
+        right = merge_sort(arr[(len(arr)//2):])
+        arr = merge(left, right)
     return arr
-
-print(merge_sort([1, 5, 8, 4, 2, 9, 6, 0, 3, 7]))
 
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
